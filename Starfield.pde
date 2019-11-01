@@ -4,7 +4,7 @@ int timer = 1;
 void setup()
 {
 	frameRate(60);
-	background(20,20,200);
+	background(120,20,200);
 	size(600,600);
 	for(int i = 0; i<bob.length;i++){
 		bob[i] = new Particle();
@@ -32,7 +32,7 @@ void draw()
 		
 	}
 	*/
-	if(timer<620){
+	if(timer<615){
 		for(int i = 0; i<bob.length;i++){
 		bob[i].move();
 		bob[i].show();
@@ -101,7 +101,7 @@ class OddballParticle extends Particle
 			sizee+=0.2;
 	}	
 	void show(){
-		fill(255,0,0,50);
+		fill(255,0,0,24);
 		ellipse((float)myX,(float)myY,(float)sizee*5,(float)sizee*5);
 	}
 }
@@ -117,6 +117,6 @@ void mousePressed(){
 		sob[i].myY=300;
 		sob[i].sizee=3;
 	}
-	background(20,20,200);
+	background(120,20,200);
 	timer=0;
 }
